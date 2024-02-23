@@ -1,0 +1,33 @@
+buildscript {
+    apply from: 'versions.gradle'
+}
+
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    testImplementation 'org.testng:testng:7.3.0'
+    implementation 'io.appium:java-client:7.5.1'
+    implementation ('com.google.guava:guava:28.0-jre') {force=true}
+    implementation 'org.apache.logging.log4j:log4j-core:2.22.1'
+   // implementation 'org.apache.logging.log4j:log4j-api:2.22.1'
+   // implementation "org.springframework:spring-web:$versions.restTemplateVersion"
+    // Add the Spring Core dependency
+    implementation 'org.springframework:spring-context:5.3.14' // Use the appropriate version
+    testImplementation 'org.springframework:spring-test:5.3.14' // Adjust version number as needed
+}
+
+
+test {
+    useTestNG()
+}

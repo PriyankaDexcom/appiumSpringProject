@@ -1,0 +1,8 @@
+ext.versions = [
+    testNgVersion: '7.9.0',
+    restTemplateVersion : '5.2.1.RELEASE',
+    springGradleVersion : '1.0.3.RELEASE'
+
+
+]
+
